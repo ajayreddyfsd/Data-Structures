@@ -104,8 +104,6 @@ class PriorityQueue {
   }
 }
 
-
-
 const pq = new PriorityQueue();
 
 // Insert some tasks with priorities
