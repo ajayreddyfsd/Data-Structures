@@ -166,7 +166,7 @@ g.addEdge("C", "D", 2);
 g.addEdge("C", "F", 4);
 g.addEdge("D", "E", 3);
 g.addEdge("D", "G", 1);
-g.addEdge("E", "H", 2);
+g.addEdge("E", "H", 10);
 g.addEdge("F", "G", 2);
 g.addEdge("G", "H", 1);
 g.addEdge("H", "I", 1);
