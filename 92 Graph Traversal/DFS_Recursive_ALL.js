@@ -64,9 +64,7 @@ class Graph {
     return visited;
   }
 
-  //a mansion of nested doors. start from the top floor, visit all doors, only one per room, till u reach dead end
-  //then go back to prev door and visit its neighbours, ...
-  //isolated nodes are taken care
+  //basically calling dfs on all nodes in AL (or) calling dfs on all non-visited nodes
   dfs_recursive_all(visited = new Set()) {
     for (let node in this.adjacencyList) {
       if (!visited.has(node)) {
