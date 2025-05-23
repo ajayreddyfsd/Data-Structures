@@ -92,7 +92,7 @@ class Graph {
   }
 
   dijkstra(start, end) {
-    const distances = {}; // Stores shortest distance from start to each node
+    const distances = {}; // Stores shortest distance from start node to each node
     const previous = {}; // Stores the path: which node we came from to reach a node
     const pq = new PriorityQueue(); // Priority Queue to pick the closest node
     const visitedOrder = []; // Keeps track of the order in which nodes were visited
