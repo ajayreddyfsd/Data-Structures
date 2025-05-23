@@ -50,9 +50,13 @@ class Graph {
     delete this.adjacencyList[vertex];
   }
 
-  //a mansion of nested doors. start from the top floor, visit all doors, only one per room, till u reach dead end
-  //then go back to prev door and visit its neighbours, ...
-  //isolated nodes are not taken care
+  /*
+  Imagine a mansion where every room has several doors. You start from the entrance hall, and you first open all the doors connected to that room (i.e., direct neighbors), adding them to a queue.
+  Then, one by one, you move to each of those rooms and repeat: open all their unvisited neighboring doors.
+  You continue like this, floor by floor, room by room, spreading outward from where you started.
+  You never go deep down a hallway unless you’ve explored everything at your current level first."
+  If there are other disconnected mansions (i.e., isolated nodes or components), you’d need to repeat the process from another unvisited room.
+  */
   bfs(start, visited = new Set()) {
     let queue = [];
 
@@ -74,9 +78,8 @@ class Graph {
     return visited;
   }
 
-  //a mansion of nested doors. start from the top floor, visit all doors, only one per room, till u reach dead end
-  //then go back to prev door and visit its neighbours, ...
-  //isolated nodes are taken care
+
+  //calling bfs on all nodes (or) calling bfs on all unvisited nodes
   bfs_all(visited = new Set()) {
     for (let node in this.adjacencyList) {
       if (!visited.has(node)) {
